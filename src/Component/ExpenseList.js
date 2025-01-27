@@ -2,19 +2,18 @@ import React, { Component } from 'react'
 import './ExpenseList.css'
 import ExpenseItem from './ExpenseItem'
 import { MdDelete } from 'react-icons/md'
-export class ExpenseList extends Component {
-  render() {
+const ExpenseList=({handleDelete,initialExpenses})=> {
     //console.log(this.props.initialExpenses);
     return (
         <>
           <ul className='list'>
-              {this.props.initialExpenses.map(expense =>
+              {initialExpenses.map(expense =>
                   {
                     return(
                       <ExpenseItem 
                       key={expense.id} 
                       expense={expense}
-                      handleDelete={this.props.handleDelete}
+                      handleDelete={handleDelete}
                       />
                     )
                   })
@@ -27,6 +26,5 @@ export class ExpenseList extends Component {
         </>
     )
   }
-}
 
 export default ExpenseList

@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import './ExpenseForm.css'
 import { MdSend } from 'react-icons/md'
-export class ExpenseForm extends Component {
-  render () {
-    return (
+const  ExpenseForm=()=>{
+  return (
       <form>
         <div className='form-center'>
           <div className='form-group'>
@@ -34,6 +33,5 @@ export class ExpenseForm extends Component {
       </button>
       </form>
     )
-  }
 }
 export default ExpenseForm
